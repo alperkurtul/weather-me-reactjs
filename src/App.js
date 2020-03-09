@@ -8,21 +8,21 @@ import WeatherInfo from "./components/Weather/WeatherInfo/WeatherInfo";
 class App extends React.Component {
 
     state = {
-        getData : null,
-        weatherDataLoaded : 'ZZZZZ'
-    }
+        getData : null
+    };
+
 
     getData = () => {
         this.setState({getData: true});
-    }
+    };
 
     clearData = () => {
         this.setState({getData: false});
-    }
+    };
 
     render() {
 
-        let weather = this.state.getData ? <WeatherInfo weatherData={this.state.weatherDataLoaded}></WeatherInfo> : '';
+        let weather = this.state.getData ? <WeatherInfo></WeatherInfo> : '';
 
         return (
             <div className="App">
