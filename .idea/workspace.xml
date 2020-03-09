@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bcde53d-fdf3-44b9-ae2d-7ca2267d063f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/axios-orders.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Button/Button.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Weather/WeatherInfo/WeatherInfo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Button/Button.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Weather/WeatherInfo/WeatherInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Weather/WeatherInfo/WeatherInfo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +40,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Weather/WeatherInfo" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -51,13 +52,14 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/UI/Button" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/components" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Weather/WeatherInfo" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -70,7 +72,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583668474188</updated>
-      <workItem from="1583668476099" duration="15217000" />
+      <workItem from="1583668476099" duration="15246000" />
+      <workItem from="1583775681453" duration="10637000" />
     </task>
     <task id="LOCAL-00001" summary="commit and push">
       <created>1583695689547</created>
@@ -86,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583695800787</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="commit and push">
+      <created>1583701342439</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583701342439</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,34 +107,38 @@
     <option name="LAST_COMMIT_MESSAGE" value="commit and push" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="265" y="98" key="CommitChangelistDialog2" timestamp="1583695800421">
+    <state x="265" y="98" key="CommitChangelistDialog2" timestamp="1583701341996">
       <screen x="0" y="23" width="1680" height="957" />
     </state>
-    <state x="265" y="98" key="CommitChangelistDialog2/0.23.1680.957@0.23.1680.957" timestamp="1583695800421" />
-    <state width="1638" height="254" key="GridCell.Tab.0.bottom" timestamp="1583697673498">
-      <screen x="0" y="23" width="1680" height="959" />
+    <state x="265" y="98" key="CommitChangelistDialog2/0.23.1680.957@0.23.1680.957" timestamp="1583701341996" />
+    <state width="1638" height="254" key="GridCell.Tab.0.bottom" timestamp="1583701360590">
+      <screen x="0" y="23" width="1680" height="957" />
     </state>
+    <state width="1638" height="254" key="GridCell.Tab.0.bottom/0.23.1680.957@0.23.1680.957" timestamp="1583701360590" />
     <state width="1638" height="254" key="GridCell.Tab.0.bottom/0.23.1680.959@0.23.1680.959" timestamp="1583697673498" />
-    <state width="1638" height="254" key="GridCell.Tab.0.center" timestamp="1583697673497">
-      <screen x="0" y="23" width="1680" height="959" />
+    <state width="1638" height="254" key="GridCell.Tab.0.center" timestamp="1583701360588">
+      <screen x="0" y="23" width="1680" height="957" />
     </state>
+    <state width="1638" height="254" key="GridCell.Tab.0.center/0.23.1680.957@0.23.1680.957" timestamp="1583701360588" />
     <state width="1638" height="254" key="GridCell.Tab.0.center/0.23.1680.959@0.23.1680.959" timestamp="1583697673497" />
-    <state width="1638" height="254" key="GridCell.Tab.0.left" timestamp="1583697673496">
-      <screen x="0" y="23" width="1680" height="959" />
+    <state width="1638" height="254" key="GridCell.Tab.0.left" timestamp="1583701360587">
+      <screen x="0" y="23" width="1680" height="957" />
     </state>
+    <state width="1638" height="254" key="GridCell.Tab.0.left/0.23.1680.957@0.23.1680.957" timestamp="1583701360587" />
     <state width="1638" height="254" key="GridCell.Tab.0.left/0.23.1680.959@0.23.1680.959" timestamp="1583697673496" />
-    <state width="1638" height="254" key="GridCell.Tab.0.right" timestamp="1583697673498">
-      <screen x="0" y="23" width="1680" height="959" />
+    <state width="1638" height="254" key="GridCell.Tab.0.right" timestamp="1583701360589">
+      <screen x="0" y="23" width="1680" height="957" />
     </state>
+    <state width="1638" height="254" key="GridCell.Tab.0.right/0.23.1680.957@0.23.1680.957" timestamp="1583701360589" />
     <state width="1638" height="254" key="GridCell.Tab.0.right/0.23.1680.959@0.23.1680.959" timestamp="1583697673498" />
     <state x="328" y="78" key="SettingsEditor" timestamp="1583695775983">
       <screen x="0" y="23" width="1680" height="957" />
     </state>
     <state x="328" y="78" key="SettingsEditor/0.23.1680.957@0.23.1680.957" timestamp="1583695775983" />
-    <state x="440" y="225" key="Vcs.Push.Dialog.v2" timestamp="1583695943305">
+    <state x="440" y="225" key="Vcs.Push.Dialog.v2" timestamp="1583701346011">
       <screen x="0" y="23" width="1680" height="957" />
     </state>
-    <state x="440" y="225" key="Vcs.Push.Dialog.v2/0.23.1680.957@0.23.1680.957" timestamp="1583695943305" />
+    <state x="440" y="225" key="Vcs.Push.Dialog.v2/0.23.1680.957@0.23.1680.957" timestamp="1583701346011" />
     <state x="645" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583696010040">
       <screen x="0" y="23" width="1680" height="957" />
     </state>

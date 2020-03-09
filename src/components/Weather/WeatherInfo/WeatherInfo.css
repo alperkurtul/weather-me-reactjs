@@ -1,0 +1,23 @@
+.WeatherInfoPage {
+    background-color: antiquewhite;
+    color: chocolate;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+    width: 80%;
+}
+
+.WeatherInfoItems {
+    padding: 5px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    border: solid 1px;
+    align-items: center;
+}
+
+.WeatherInfoItem {
+    border: solid 1px;
+}
