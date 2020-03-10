@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bcde53d-fdf3-44b9-ae2d-7ca2267d063f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/axios-orders.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Weather/WeatherInfo/WeatherInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Weather/WeatherInfo/WeatherInfo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +42,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -71,6 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1583668474188</updated>
       <workItem from="1583668476099" duration="15217000" />
+      <workItem from="1583735731067" duration="1549000" />
     </task>
     <task id="LOCAL-00001" summary="commit and push">
       <created>1583695689547</created>
@@ -101,25 +97,30 @@
       <screen x="0" y="23" width="1680" height="957" />
     </state>
     <state x="265" y="98" key="CommitChangelistDialog2/0.23.1680.957@0.23.1680.957" timestamp="1583695800421" />
-    <state width="1638" height="254" key="GridCell.Tab.0.bottom" timestamp="1583697673498">
-      <screen x="0" y="23" width="1680" height="959" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1583823626117">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583823626117" />
     <state width="1638" height="254" key="GridCell.Tab.0.bottom/0.23.1680.959@0.23.1680.959" timestamp="1583697673498" />
-    <state width="1638" height="254" key="GridCell.Tab.0.center" timestamp="1583697673497">
-      <screen x="0" y="23" width="1680" height="959" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1583823626117">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583823626117" />
     <state width="1638" height="254" key="GridCell.Tab.0.center/0.23.1680.959@0.23.1680.959" timestamp="1583697673497" />
-    <state width="1638" height="254" key="GridCell.Tab.0.left" timestamp="1583697673496">
-      <screen x="0" y="23" width="1680" height="959" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1583823626117">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583823626117" />
     <state width="1638" height="254" key="GridCell.Tab.0.left/0.23.1680.959@0.23.1680.959" timestamp="1583697673496" />
-    <state width="1638" height="254" key="GridCell.Tab.0.right" timestamp="1583697673498">
-      <screen x="0" y="23" width="1680" height="959" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1583823626117">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583823626117" />
     <state width="1638" height="254" key="GridCell.Tab.0.right/0.23.1680.959@0.23.1680.959" timestamp="1583697673498" />
-    <state x="328" y="78" key="SettingsEditor" timestamp="1583695775983">
-      <screen x="0" y="23" width="1680" height="957" />
+    <state x="375" y="60" key="SettingsEditor" timestamp="1583735838828">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="375" y="60" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583735838828" />
     <state x="328" y="78" key="SettingsEditor/0.23.1680.957@0.23.1680.957" timestamp="1583695775983" />
     <state x="440" y="225" key="Vcs.Push.Dialog.v2" timestamp="1583695943305">
       <screen x="0" y="23" width="1680" height="957" />
@@ -129,5 +130,9 @@
       <screen x="0" y="23" width="1680" height="957" />
     </state>
     <state x="645" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.957@0.23.1680.957" timestamp="1583696010040" />
+    <state x="637" y="312" key="git4idea.merge.GitPullDialog" timestamp="1583823671172">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="637" y="312" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583823671172" />
   </component>
 </project>
