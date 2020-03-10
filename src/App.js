@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './components/UI/Button/Button.css';
+import './components/Weather/WeatherInfo/WeatherInfo.css';
 
 import Button from './components/UI/Button/Button';
 import WeatherInfo from "./components/Weather/WeatherInfo/WeatherInfo";
