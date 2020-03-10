@@ -1,23 +1,42 @@
-.WeatherInfoPage {
-    background-color: antiquewhite;
-    color: chocolate;
+.WIPage {
+    font-family: Roboto,sans-serif;
     margin: 10px;
-    border: none;
-    cursor: pointer;
-    font: inherit;
-    font-weight: bold;
-    width: 80%;
+    color: midnightblue;
 }
 
-.WeatherInfoItems {
-    padding: 5px;
+.WIItems {
+    background-color: skyblue;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 15px;
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    border: solid 1px;
     align-items: center;
+    border-radius: 55px;
+    width: 70%;
+    margin: auto;
+    font-weight: bold;
 }
 
-.WeatherInfoItem {
-    border: solid 1px;
+.WIItem {
+    font-size: 12px;
 }
+
+.WICurrentTemp {
+    background-color: #282c34;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 45px;
+}
+
+.WIFeelTemp {
+    background-color: cadetblue;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 45px;
+}
+
