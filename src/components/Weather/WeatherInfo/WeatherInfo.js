@@ -61,25 +61,53 @@ class WeatherInfo extends Component {
         let weatherInfo = null;
         if (this.state.weatherDataLoaded == 'true') {
             weatherInfo = (
-                <p className='WeatherInfoItems'>
-                <div className='WeatherInfoItem'>{this.state.weatherData.description}</div>
-                <div className='WeatherInfoItem'><img src={this.state.weatherData.descriptionIcon} alt='MyBurger' /></div>
-                <div className='WeatherInfoItem'>{this.state.weatherData.realTemprature}</div>
-                <div className='WeatherInfoItem'>{this.state.weatherData.feelsTemprature}</div>
-                <div className='WeatherInfoItem'>{this.state.weatherData.minTemprature}</div>
-                <div className='WeatherInfoItem'>{this.state.weatherData.maxTemprature}</div>
-                <div className='WeatherInfoItem'>{this.state.weatherData.pressure}</div>
-                <div className='WeatherInfoItem'>{this.state.weatherData.humidity}</div>
-                <div className='WeatherInfoItem'>{this.state.weatherData.countryCode}</div>
-                <div className='WeatherInfoItem'>{this.state.weatherData.sunRise}</div>
-                <div className='WeatherInfoItem'>{this.state.weatherData.sunSet}</div>
-                <div className='WeatherInfoItem'>{this.state.weatherData.locationName}</div>
-                </p>
+                <div className='WIItems WIItem'>
+                    <div>
+                        <div><img src={this.state.weatherData.descriptionIcon} alt='WeatherIcon' height={'50px'} /></div>
+                        <div>{this.state.weatherData.description}</div>
+                    </div>
+                    <div>
+                        <div>Anlık</div>
+                        <div className='WIFeelTemp'>{this.state.weatherData.realTemprature}</div>
+                    </div>
+                    <div>
+                        <div>Hissedilen</div>
+                        <div className='WIFeelTemp'>{this.state.weatherData.feelsTemprature}</div>
+                    </div>
+                    <div>
+                        <div>En düşük</div>
+                        <div className='WIFeelTemp'>{this.state.weatherData.minTemprature}</div>
+                    </div>
+                    <div>
+                        <div>En yüksek</div>
+                        <div className='WIFeelTemp'>{this.state.weatherData.maxTemprature}</div>
+                    </div>
+                    <div>
+                        <div>Basınç</div>
+                        <div className='WIFeelTemp'>{this.state.weatherData.pressure}</div>
+                    </div>
+                    <div>
+                        <div>Nem</div>
+                        <div className='WIFeelTemp'>{this.state.weatherData.humidity}</div>
+                    </div>
+                    <div>
+                        <div>Gün doğumu</div>
+                        <div className='WIFeelTemp'>{this.state.weatherData.sunRise}</div>
+                    </div>
+                    <div>
+                        <div>Gün batımı</div>
+                        <div className='WIFeelTemp'>{this.state.weatherData.sunSet}</div>
+                    </div>
+                    <div>
+                        <div>Yer</div>
+                        <div className='WIFeelTemp'>{this.state.weatherData.locationName}</div>
+                    </div>
+                </div>
             );
         }
 
         return (
-            <div className='WeatherInfoPage'>
+            <div className='WIPage'>
                 {weatherInfo}
             </div>
         );
