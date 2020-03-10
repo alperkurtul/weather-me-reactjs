@@ -65,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1583668474188</updated>
       <workItem from="1583668476099" duration="15246000" />
-      <workItem from="1583775681453" duration="10978000" />
+      <workItem from="1583775681453" duration="11057000" />
     </task>
     <task id="LOCAL-00001" summary="commit and push">
       <created>1583695689547</created>
@@ -95,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583792189497</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="commit and push">
+      <created>1583792369899</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1583792369899</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,10 +113,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="commit and push" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="265" y="97" key="CommitChangelistDialog2" timestamp="1583792189040">
+    <state x="265" y="97" key="CommitChangelistDialog2" timestamp="1583792369596">
       <screen x="0" y="23" width="1680" height="947" />
     </state>
-    <state x="265" y="97" key="CommitChangelistDialog2/0.23.1680.947@0.23.1680.947" timestamp="1583792189040" />
+    <state x="265" y="97" key="CommitChangelistDialog2/0.23.1680.947@0.23.1680.947" timestamp="1583792369596" />
     <state x="265" y="98" key="CommitChangelistDialog2/0.23.1680.957@0.23.1680.957" timestamp="1583701341996" />
     <state width="1638" height="254" key="GridCell.Tab.0.bottom" timestamp="1583701360590">
       <screen x="0" y="23" width="1680" height="957" />
@@ -135,10 +142,10 @@
       <screen x="0" y="23" width="1680" height="957" />
     </state>
     <state x="328" y="78" key="SettingsEditor/0.23.1680.957@0.23.1680.957" timestamp="1583695775983" />
-    <state x="440" y="223" key="Vcs.Push.Dialog.v2" timestamp="1583792194094">
+    <state x="440" y="223" key="Vcs.Push.Dialog.v2" timestamp="1583792385826">
       <screen x="0" y="23" width="1680" height="947" />
     </state>
-    <state x="440" y="223" key="Vcs.Push.Dialog.v2/0.23.1680.947@0.23.1680.947" timestamp="1583792194094" />
+    <state x="440" y="223" key="Vcs.Push.Dialog.v2/0.23.1680.947@0.23.1680.947" timestamp="1583792385826" />
     <state x="440" y="225" key="Vcs.Push.Dialog.v2/0.23.1680.957@0.23.1680.957" timestamp="1583701346011" />
     <state x="645" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583696010040">
       <screen x="0" y="23" width="1680" height="957" />
