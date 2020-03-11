@@ -4,7 +4,17 @@
     color: midnightblue;
 }
 
-.WIItems {
+.WImage {
+    height: 250px;
+    width: 250px;
+}
+
+.WICityName {
+    font-size: 25pt;
+    color: crimson;
+}
+
+.WIItems1 {
     background-color: skyblue;
     padding-left: 30px;
     padding-right: 30px;
@@ -18,6 +28,21 @@
     width: 70%;
     margin: auto;
     font-weight: bold;
+}
+
+.WIItems2 {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    font-weight: bold;
+    box-shadow: 0 1px #ccc inset;
 }
 
 .WIItem {
