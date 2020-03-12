@@ -11,7 +11,6 @@ import axios from "./axios-orders";
 class App extends React.Component {
 
     state = {
-        getData : null,
         weatherDataLoaded : null,
         weatherJSONData : null,
         weatherData : {
@@ -30,12 +29,12 @@ class App extends React.Component {
             locationId : '',
             locationName : ''
         },
-        error : null
+        error : null,
+        viewMode : false
     };
 
 
     getData = () => {
-        //this.setState({getData: true});
         //axios.get(`${process.env.REACT_APP_FB_INGREDIENTS_SUFFIX}`)
         axios.get('/wm/curwet')
             .then(response => {
@@ -69,14 +68,22 @@ class App extends React.Component {
         this.setState({weatherDataLoaded: false});
     };
 
+    changeView = () => {
+        if (this.state.viewMode)
+            this.setState({viewMode: false});
+        else
+            this.setState({viewMode: true});
+    };
+
     render() {
 
-        let weather = this.state.weatherDataLoaded ? <WeatherInfo weatherData={this.state.weatherData}></WeatherInfo> : '';
+        let weather = this.state.weatherDataLoaded ? <WeatherInfo viewMode={this.state.viewMode}  weatherDataLoaded={this.state.weatherDataLoaded} weatherData={this.state.weatherData}></WeatherInfo> : '';
 
         return (
             <div className="App">
                 <div><Button clicked={this.getData}>İSTANBUL Hava Durumu</Button></div>
                 <div><Button clicked={this.clearData}>Temizle</Button></div>
+                <div><Button clicked={this.changeView}>Değiştir</Button></div>
                 {weather}
             </div>
         );
