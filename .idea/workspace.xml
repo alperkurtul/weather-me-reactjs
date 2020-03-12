@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6bcde53d-fdf3-44b9-ae2d-7ca2267d063f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Weather/WeatherInfo/WeatherInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Weather/WeatherInfo/WeatherInfo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Weather/WeatherInfo/WeatherInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Weather/WeatherInfo/WeatherInfo.js" afterDir="false" />
-    </list>
+    <list default="true" id="6bcde53d-fdf3-44b9-ae2d-7ca2267d063f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,7 +66,7 @@
       <updated>1583668474188</updated>
       <workItem from="1583668476099" duration="15246000" />
       <workItem from="1583775681453" duration="11057000" />
-      <workItem from="1583861402313" duration="7689000" />
+      <workItem from="1583861402313" duration="7726000" />
     </task>
     <task id="LOCAL-00001" summary="commit and push">
       <created>1583695689547</created>
@@ -115,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583861434179</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="commit and push">
+      <created>1583901191030</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1583901191030</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,10 +128,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="commit and push" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="265" y="97" key="CommitChangelistDialog2" timestamp="1583861433600">
-      <screen x="0" y="23" width="1680" height="947" />
+    <state x="265" y="97" key="CommitChangelistDialog2" timestamp="1583901190660">
+      <screen x="0" y="23" width="1680" height="948" />
     </state>
     <state x="265" y="97" key="CommitChangelistDialog2/0.23.1680.947@0.23.1680.947" timestamp="1583861433600" />
+    <state x="265" y="97" key="CommitChangelistDialog2/0.23.1680.948@0.23.1680.948" timestamp="1583901190660" />
     <state x="265" y="98" key="CommitChangelistDialog2/0.23.1680.957@0.23.1680.957" timestamp="1583701341996" />
     <state width="1638" height="254" key="GridCell.Tab.0.bottom" timestamp="1583701360590">
       <screen x="0" y="23" width="1680" height="957" />
@@ -159,11 +162,16 @@
       <screen x="0" y="23" width="1680" height="957" />
     </state>
     <state x="328" y="78" key="SettingsEditor/0.23.1680.957@0.23.1680.957" timestamp="1583695775983" />
-    <state x="440" y="223" key="Vcs.Push.Dialog.v2" timestamp="1583792385826">
-      <screen x="0" y="23" width="1680" height="947" />
+    <state x="440" y="223" key="Vcs.Push.Dialog.v2" timestamp="1583901193904">
+      <screen x="0" y="23" width="1680" height="948" />
     </state>
     <state x="440" y="223" key="Vcs.Push.Dialog.v2/0.23.1680.947@0.23.1680.947" timestamp="1583792385826" />
+    <state x="440" y="223" key="Vcs.Push.Dialog.v2/0.23.1680.948@0.23.1680.948" timestamp="1583901193904" />
     <state x="440" y="225" key="Vcs.Push.Dialog.v2/0.23.1680.957@0.23.1680.957" timestamp="1583701346011" />
+    <state x="533" y="329" key="com.intellij.ide.util.TipDialog" timestamp="1584024177342">
+      <screen x="0" y="23" width="1680" height="948" />
+    </state>
+    <state x="533" y="329" key="com.intellij.ide.util.TipDialog/0.23.1680.948@0.23.1680.948" timestamp="1584024177342" />
     <state x="645" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583696010040">
       <screen x="0" y="23" width="1680" height="957" />
     </state>
