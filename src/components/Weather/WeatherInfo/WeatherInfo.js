@@ -2,56 +2,72 @@ import React from 'react';
 
 const weatherInfo  = (props) => {
 
+        let wiitems1 = 'WIItems1';
+        let wiitems2 = 'WIItems2';
+
+        let wiitems = '';
+        /*if (props.viewMode)
+            wiitems = wiitems1;
+        else*/
+            wiitems = wiitems2;
+
+        let style1 = {color: 'red',
+                        backgroundColor: 'blue'};
+
         let weatherInfo = null;
         if (props.weatherDataLoaded) {
             weatherInfo = (
-                <div className='WIItems WIItem'>
+                <div>
+                <div className={[wiitems , 'WIItem'].join(' ')}>
                     <div>
-                        <div><img src={props.weatherData.descriptionIcon} alt='WeatherIcon' height={'50px'} /></div>
+                        <div><img className='WImage' src={props.weatherData.descriptionIcon} alt='WeatherIcon' /></div>
+                    </div>
+                    <div style={{...style1}}>
+                        <div>{props.weatherData.locationName}</div>
                         <div>{props.weatherData.description}</div>
+                        <div>{props.weatherData.realTemprature}</div>
+                        <div>{props.weatherData.humidity}</div>
                     </div>
+
                     <div>
-                        <div>Anlık</div>
-                        <div className='WIFeelTemp'>{props.weatherData.realTemprature}</div>
-                    </div>
                     <div>
                         <div>Hissedilen</div>
-                        <div className='WIFeelTemp'>{props.weatherData.feelsTemprature}</div>
+                        <div>{props.weatherData.feelsTemprature}</div>
                     </div>
                     <div>
                         <div>En düşük</div>
-                        <div className='WIFeelTemp'>{props.weatherData.minTemprature}</div>
+                        <div>{props.weatherData.minTemprature}</div>
                     </div>
                     <div>
                         <div>En yüksek</div>
-                        <div className='WIFeelTemp'>{props.weatherData.maxTemprature}</div>
+                        <div>{props.weatherData.maxTemprature}</div>
                     </div>
+                    </div>
+
+
+                    <div>
                     <div>
                         <div>Basınç</div>
-                        <div className='WIFeelTemp'>{props.weatherData.pressure}</div>
-                    </div>
-                    <div>
-                        <div>Nem</div>
-                        <div className='WIFeelTemp'>{props.weatherData.humidity}</div>
+                        <div>{props.weatherData.pressure}</div>
                     </div>
                     <div>
                         <div>Gün doğumu</div>
-                        <div className='WIFeelTemp'>{props.weatherData.sunRise}</div>
+                        <div>{props.weatherData.sunRise}</div>
                     </div>
                     <div>
                         <div>Gün batımı</div>
-                        <div className='WIFeelTemp'>{props.weatherData.sunSet}</div>
+                        <div>{props.weatherData.sunSet}</div>
                     </div>
-                    <div>
-                        <div>Yer</div>
-                        <div className='WIFeelTemp'>{props.weatherData.locationName}</div>
                     </div>
+
+                </div>
+                <div className={[wiitems , 'WIItem'].join(' ')}>&nbsp;</div>
                 </div>
             );
         }
 
         return (
-            <div className='WIPage'>
+            <div>
                 {weatherInfo}
             </div>
         );
