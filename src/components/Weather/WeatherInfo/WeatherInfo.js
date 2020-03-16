@@ -2,33 +2,20 @@ import React from 'react';
 
 const weatherInfo  = (props) => {
 
-        let wiitems1 = 'WIItems1';
-        let wiitems2 = 'WIItems2';
-
-        let wiitems = '';
-        /*if (props.viewMode)
-            wiitems = wiitems1;
-        else*/
-            wiitems = wiitems2;
-
-        let style1 = {color: 'red',
-                        backgroundColor: 'blue'};
-
         let weatherInfo = null;
         if (props.weatherDataLoaded) {
             weatherInfo = (
-                <div>
-                {/*<div className={[wiitems , 'WIItem'].join(' ')}>*/}
-                {/*<div className={'WIItems2 WIItem'}>*/}
+                <div className={'WIPageFont'}>
                 <div className={'WI100'}>
                     <div className={'WI200'}>
                         <div><img className='WImage' src={props.weatherData.descriptionIcon} alt='WeatherIcon' /></div>
                     </div>
 
-                    {/*<div style={{...style1}}>*/}
                     <div className={'WI300'}>
+                        <div>
                         <div className={'WILabel02'}>{props.weatherData.locationName}</div>
-                        <div>{props.weatherData.description}</div>
+                        <div class={"WIWeatherSituation"}>{props.weatherData.description}</div>
+                        </div>
                         <div><span className={'WILabel01'}>Sıcaklık&nbsp;:</span>&nbsp;{props.weatherData.realTemprature}&#176;C</div>
                         <div><span className={'WILabel01'}>Nem Oranı&nbsp;:</span>&nbsp;%{props.weatherData.humidity}</div>
                     </div>
@@ -67,7 +54,6 @@ const weatherInfo  = (props) => {
                     </div>
 
                 </div>
-                {/*<div className={[wiitems , 'WIItem'].join(' ')}>&nbsp;</div>*/}
                 <div className={'WI100'}>&nbsp;</div>
                 </div>
             );
