@@ -1,5 +1,4 @@
 div {
-    /*border: 1px solid;*/
     border: none;
 }
 
@@ -28,7 +27,7 @@ div {
     align-items: start;
     margin: 20px 0px 50px 0px;
     font-size: 16pt;
-    font-family: Roboto,sans-serif;
+    /*font-family: Roboto,sans-serif;*/
 }
 
 .WI301 {
@@ -81,72 +80,17 @@ div {
     font-size: 45pt;
 }
 
-
-.WIPage {
-    font-family: Roboto,sans-serif;
-    margin: 10px;
-    color: midnightblue;
-}
-
 .WImage {
     height: 250px;
     width: 250px;
     border: none;
 }
 
-.WICityName {
-    font-size: 25pt;
-    color: crimson;
+.WIWeatherSituation {
+    font-weight: bolder;
+    font-size: 12pt;
 }
 
-.WIItems1 {
-    background-color: skyblue;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 5px;
-    padding-bottom: 15px;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 55px;
-    width: 70%;
-    margin: auto;
-    font-weight: bold;
+.WIPageFont {
+    font-family: Roboto,sans-serif;
 }
-
-.WIItems2 {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 5px;
-    padding-bottom: 15px;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
-    margin: auto;
-    font-weight: bold;
-    box-shadow: 0 1px #ccc inset;
-}
-
-.WIItem {
-    font-size: 16px;
-}
-
-.WICurrentTemp {
-    background-color: #282c34;
-    color: white;
-    font-weight: bold;
-    padding: 5px;
-    border-radius: 45px;
-}
-
-.WIFeelTemp {
-    background-color: cadetblue;
-    color: white;
-    font-weight: bold;
-    padding: 5px;
-    border-radius: 45px;
-}
-
