@@ -36,7 +36,8 @@ class App extends React.Component {
 
     getData = () => {
         //axios.get(`${process.env.REACT_APP_FB_INGREDIENTS_SUFFIX}`)
-        axios.get('/wm/curwet')
+        //axios.get('/weatherme/v1/getcurrentweather/Istanbul')
+        axios.get('/weatherme/v1/getcurrentweather/745044')
             .then(response => {
                 this.setState({
                     weatherDataLoaded: true,
