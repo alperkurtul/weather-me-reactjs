@@ -1,0 +1,11 @@
+.ButtonUI {
+    background-color: antiquewhite;
+    color: chocolate;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+}

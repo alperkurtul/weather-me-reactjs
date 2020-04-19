@@ -1,0 +1,96 @@
+div {
+    border: none;
+}
+
+.WI100 {
+    border: none;
+    display: flex;
+    flex-flow: row;
+    height: 300px;
+    width: 70%;
+    margin: auto;
+    box-shadow: 0 1px #ccc inset;
+}
+
+.WI200 {
+    border: none;
+    width: 20%;
+}
+
+
+.WI300 {
+    border: none;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    width: 20%;
+    align-items: start;
+    margin: 20px 0px 50px 0px;
+    font-size: 16pt;
+    /*font-family: Roboto,sans-serif;*/
+}
+
+.WI301 {
+    border: none;
+    display: flex;
+    flex-flow: column;
+    width: 60%;
+    margin: 20px 0px 30px 0px;
+    background-color: lightgray;
+    font-size: 16pt;
+}
+
+.WI400 {
+    border: none;
+    display: flex;
+    flex-flow: row;
+    justify-content: stretch;
+    height: 50%;
+}
+
+.WI500 {
+    border: none;
+    width: 35%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.WI500margin01 {
+    margin: 0px 1px 1px 0px;
+}
+
+.WI500margin02 {
+    margin: 0px 0px 1px 0px;
+}
+
+.WI500margin03 {
+    margin: 0px 1px 0px 0px;
+}
+
+.WILabel01 {
+    color: rebeccapurple;
+    font-weight: bold;
+}
+
+.WILabel02 {
+    color: darkred;
+    font-weight: bolder;
+    font-size: 45pt;
+}
+
+.WImage {
+    height: 250px;
+    width: 250px;
+    border: none;
+}
+
+.WIWeatherSituation {
+    font-weight: bolder;
+    font-size: 12pt;
+}
+
+.WIPageFont {
+    font-family: Roboto,sans-serif;
+}
