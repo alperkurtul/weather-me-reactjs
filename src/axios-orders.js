@@ -1,8 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-    //baseURL: `${process.env.REACT_APP_FB_ROOT_API_URL}`
-    baseURL: 'http://localhost:8080'
+    baseURL: `${process.env.REACT_APP_WEATHER_ME_SPRING_BOOT_API_URL}`
 });
 
 export default instance;
