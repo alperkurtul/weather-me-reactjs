@@ -9,6 +9,16 @@ import WeatherOtherContent from './WeatherOtherContent';
 import WeatherHeader from './WeatherHeader';
 
 function WeatherInfoPage(props) {
+
+  var weekDays = ['Paz','Pzt','Sal','Çar','Per','Cum','Cmt'];
+  var months = ['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+
+  var d = new Date();
+  var dayNumOfWeek = d.getDay();
+  var dayOfWeek = weekDays[ dayNumOfWeek ];
+  var month = months[ d.getMonth() ];
+  var date = d.getDate();
+
   return (
     
       <div className="site-content">
@@ -21,9 +31,9 @@ function WeatherInfoPage(props) {
           <div className="container">
             <div className="forecast-container">
 
-              <WeatherToday weatherData={props.weatherData} />
+              <WeatherToday weatherData={props.weatherData} dayOfWeek={dayOfWeek} month={month} date={date}/>
 
-              <WeatherNextDays />
+              <WeatherNextDays daysArray={weekDays} dayNumOfWeek={dayNumOfWeek} />
              
             </div>
           </div>

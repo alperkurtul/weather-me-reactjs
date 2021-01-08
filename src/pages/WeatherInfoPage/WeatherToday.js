@@ -19,19 +19,35 @@ import icon13 from './images/icons/icon-13.svg';
 import icon14 from './images/icons/icon-14.svg';
 
 function WeatherToday(props) {
+
+  let descIcon = '';
+  switch (props.weatherData.description) {
+    case ('açık'):
+        descIcon = icon2;
+        break;
+    /*case (''):
+        descIcon = iconXX;
+        break;
+    case (''):
+        descIcon = iconXX;
+        break;*/
+    default:
+      descIcon= '';
+  }
+
   return (
           
     <div className="today forecast">
         <div className="forecast-header">
-            <div className="day">Monday</div>
-            <div className="date">6 Oct</div>
+            <div className="day">{props.dayOfWeek}</div>
+            <div className="date">{props.date}&nbsp;{props.month}</div>
         </div>
         <div className="forecast-content">
-            <div className="location">{props.weatherData.locationName}</div>
+            <div className="location">{props.weatherData.locationName}&nbsp;&nbsp;({props.weatherData.description})</div>
             <div className="degree">
             <div className="num">{props.weatherData.realTemprature}<sup>o</sup>C</div>
             <div className="forecast-icon">
-                <img src={icon1} alt="" width="90" />
+                <img src={descIcon} alt="" width="90" />
             </div>	
             </div>
             <span><img src={iconUmberella} alt="" />20%</span>

@@ -15,15 +15,16 @@ import icon12 from './images/icons/icon-12.svg';
 import icon13 from './images/icons/icon-13.svg';
 import icon14 from './images/icons/icon-14.svg';
 
-function WeatherNextDays() {
+function WeatherNextDays(props) {
+
   return (
     
     <>
         <div className="forecast">
             <div className="forecast-header">
-                <div className="day">Tuesday</div>
+                <div className="day">{props.daysArray[ (props.dayNumOfWeek+1) % 7 ]}</div>
             </div> 
-            <div className="forecast-content">
+            <div className="forecast-content" style={{display: "none"}}>
                 <div className="forecast-icon">
                 <img src={icon2} alt="" width="48" />
                 </div>
@@ -33,9 +34,9 @@ function WeatherNextDays() {
         </div>
         <div className="forecast">
             <div className="forecast-header">
-                <div className="day">Wednesday</div>
+                <div className="day">{props.daysArray[ (props.dayNumOfWeek+2) % 7 ]}</div>
             </div> 
-            <div className="forecast-content">
+            <div className="forecast-content" style={{display: "none"}}>
                 <div className="forecast-icon">
                 <img src={icon3} alt="" width="48" />
                 </div>
@@ -45,9 +46,9 @@ function WeatherNextDays() {
         </div>
         <div className="forecast">
             <div className="forecast-header">
-                <div className="day">Thursday</div>
+                <div className="day">{props.daysArray[ (props.dayNumOfWeek+3) % 7 ]}</div>
             </div> 
-            <div className="forecast-content">
+            <div className="forecast-content" style={{display: "none"}}>
                 <div className="forecast-icon">
                 <img src={icon4} alt="" width="48" />
                 </div>
@@ -57,9 +58,9 @@ function WeatherNextDays() {
         </div>
         <div className="forecast">
             <div className="forecast-header">
-                <div className="day">Friday</div>
+                <div className="day">{props.daysArray[ (props.dayNumOfWeek+4) % 7 ]}</div>
             </div> 
-            <div className="forecast-content">
+            <div className="forecast-content" style={{display: "none"}}>
                 <div className="forecast-icon">
                 <img src={icon5} alt="" width="48" />
                 </div>
@@ -69,9 +70,9 @@ function WeatherNextDays() {
         </div>
         <div className="forecast">
             <div className="forecast-header">
-                <div className="day">Saturday</div>
+                <div className="day">{props.daysArray[ (props.dayNumOfWeek+5) % 7 ]}</div>
             </div> 
-            <div className="forecast-content">
+            <div className="forecast-content" style={{display: "none"}}>
                 <div className="forecast-icon">
                 <img src={icon6} alt="" width="48" />
                 </div>
@@ -81,9 +82,9 @@ function WeatherNextDays() {
         </div>
         <div className="forecast">
             <div className="forecast-header">
-                <div className="day">Sunday</div>
+                <div className="day">{props.daysArray[ (props.dayNumOfWeek+6) % 7 ]}</div>
             </div> 
-            <div className="forecast-content">
+            <div className="forecast-content" style={{display: "none"}}>
                 <div className="forecast-icon">
                 <img src={icon7} alt="" width="48" />
                 </div>

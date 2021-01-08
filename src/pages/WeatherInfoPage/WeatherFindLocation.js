@@ -6,10 +6,10 @@ function WeatherFindLocation() {
   return (
     
     <div className="hero" style={{backgroundImage: `url(${banner})`}}>
-      <div className="container">
+      <div className="container" style={{display: "none"}}>
         <form action="#" className="find-location">
-          <input type="text" placeholder="Find your location..." />
-          <input type="submit" value="Find" />
+          <input type="text" placeholder="Şehir arayın..." />
+          <input type="submit" value="Ara" />
         </form>
       </div>
     </div>
