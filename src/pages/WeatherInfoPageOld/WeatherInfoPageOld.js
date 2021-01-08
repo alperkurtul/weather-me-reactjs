@@ -1,6 +1,6 @@
 import React from 'react';
 
-const weatherInfo  = (props) => {
+const weatherInfoOld  = (props) => {
 
         let weatherInfo = null;
         if (props.weatherDataLoaded) {
@@ -67,4 +67,4 @@ const weatherInfo  = (props) => {
 
 }
 
-export default weatherInfo;
+export default weatherInfoOld;
