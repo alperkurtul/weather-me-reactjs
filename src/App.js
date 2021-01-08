@@ -39,7 +39,8 @@ class App extends React.Component {
 
                 response.data['realTemprature'] = Math.round(response.data['realTemprature']);
                 response.data['feelsTemprature'] = Math.round(response.data['feelsTemprature']);
-                console.log('response.data: ' + response.data.value);
+                response.data['sunRise'] = response.data['sunRise'].substr(11,5);
+                response.data['sunSet'] = response.data['sunSet'].substr(11,5);
 
                 this.setState({
                     weatherDataLoaded: true,
