@@ -12,10 +12,10 @@ function WeatherNearFuture(props) {
                 </div> 
                 <div className="forecast-content">
                     <div className="forecast-icon">
-                    <img src={nf.icon} alt="" width="48" />
+                    <img src={nf.icon} alt="" width="35" />
                     </div>
                     <div className="degree">{nf.temp}<sup>o</sup>C</div>
-                    <small>{nf.description}</small>
+                    {/* <small>{nf.description}</small> */}
                 </div>
             </div>
         );
