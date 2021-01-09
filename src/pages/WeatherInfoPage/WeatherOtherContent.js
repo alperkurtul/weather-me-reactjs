@@ -5,7 +5,7 @@ import icon2 from './images/icons/icon-2.svg';
 import icon3 from './images/icons/icon-3.svg';
 import icon4 from './images/icons/icon-4.svg';
 import icon5 from './images/icons/icon-5.svg';
-import icon6 from './images/icons/icon-8.svg';
+import icon6 from './images/icons/icon-6.svg';
 import icon7 from './images/icons/icon-7.svg';
 import icon8 from './images/icons/icon-8.svg';
 import icon9 from './images/icons/icon-9.svg';
