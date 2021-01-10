@@ -2,7 +2,7 @@ import React from 'react';
 
 import banner from './images/banner.png';
 
-function WeatherFindLocation() {
+const weatherFindLocation = () => {
   return (
     
     <div className="hero" style={{backgroundImage: `url(${banner})`}}>
@@ -17,4 +17,4 @@ function WeatherFindLocation() {
   );
 }
 
-export default WeatherFindLocation;
+export default weatherFindLocation;

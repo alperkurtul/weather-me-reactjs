@@ -15,7 +15,7 @@ import icon12 from './images/icons/icon-12.svg';
 import icon13 from './images/icons/icon-13.svg';
 import icon14 from './images/icons/icon-14.svg';
 
-function WeatherOtherContent() {
+const weatherOtherContent = () => {
   return (
     
     <main className="main-content">
@@ -42,4 +42,4 @@ function WeatherOtherContent() {
   );
 }
 
-export default WeatherOtherContent;
+export default weatherOtherContent;

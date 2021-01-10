@@ -15,7 +15,7 @@ import icon12 from './images/icons/icon-12.svg';
 import icon13 from './images/icons/icon-13.svg';
 import icon14 from './images/icons/icon-14.svg';
 
-function WeatherNextDays(props) {
+const weatherNextDays = (props) => {
 
   return (
     
@@ -97,4 +97,4 @@ function WeatherNextDays(props) {
   );
 }
 
-export default WeatherNextDays;
+export default weatherNextDays;

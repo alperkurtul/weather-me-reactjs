@@ -2,7 +2,7 @@ import React from 'react';
 
 import logo from './images/logo.png';
 
-function WeatherHeader() {
+const weatherHeader = () => {
   return (
       
     <div className="site-header">
@@ -31,4 +31,4 @@ function WeatherHeader() {
   );
 }
 
-export default WeatherHeader;
+export default weatherHeader;

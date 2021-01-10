@@ -1,6 +1,6 @@
 import React from 'react';
 
-function WeatherCurrent(props) {
+const weatherCurrent = (props) => {
 
   let descIcon = props.weatherData.icon;
 
@@ -36,4 +36,4 @@ function WeatherCurrent(props) {
   );
 }
 
-export default WeatherCurrent;
+export default weatherCurrent;

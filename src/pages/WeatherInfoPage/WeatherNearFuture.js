@@ -1,6 +1,6 @@
 import React from 'react';
 
-function WeatherNearFuture(props) {
+const weatherNearFuture = (props) => {
 
     const nearFutureObjs = props.weatherData.nearFuture;
 
@@ -28,4 +28,4 @@ function WeatherNearFuture(props) {
   );
 }
 
-export default WeatherNearFuture;
+export default weatherNearFuture;
