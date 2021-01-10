@@ -80,7 +80,9 @@ class App extends React.Component {
 
         //axios.get(`${process.env.REACT_APP_FB_INGREDIENTS_SUFFIX}`)
         //axios.get('/weatherme/v1/getcurrentweather/Istanbul')
-        axios.get('/weatherme/v1/getcurrentweather/745044')
+        //axios.get('/weatherme/v1/getcurrentweather/745044')   // Istanbul
+        //axios.get('/weatherme/v1/getcurrentweather/745042')   // İstanbul
+        axios.get('/weatherme/v1/getcurrentweather/744926')   // Kadıköy
             .then(response => {
 
                 descIcon = this.decideIcon(response.data['description']);
