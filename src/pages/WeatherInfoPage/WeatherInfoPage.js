@@ -11,28 +11,12 @@ import WeatherOtherContent from './WeatherOtherContent';
 import WeatherHeader from './WeatherHeader';
 import WeatherNearFuture from './WeatherNearFuture';
 
-import icon1 from '../../pages/WeatherInfoPage/images/icons/icon-1.svg';
-import icon2 from '../../pages/WeatherInfoPage/images/icons/icon-2.svg';
-import icon3 from '../../pages/WeatherInfoPage/images/icons/icon-3.svg';
-import icon4 from '../../pages/WeatherInfoPage/images/icons/icon-4.svg';
-import icon5 from '../../pages/WeatherInfoPage/images/icons/icon-5.svg';
-import icon6 from '../../pages/WeatherInfoPage/images/icons/icon-6.svg';
-import icon7 from '../../pages/WeatherInfoPage/images/icons/icon-7.svg';
-import icon8 from '../../pages/WeatherInfoPage/images/icons/icon-8.svg';
-import icon9 from '../../pages/WeatherInfoPage/images/icons/icon-9.svg';
-import icon10 from '../../pages/WeatherInfoPage/images/icons/icon-10.svg';
-import icon11 from '../../pages/WeatherInfoPage/images/icons/icon-11.svg';
-import icon12 from '../../pages/WeatherInfoPage/images/icons/icon-12.svg';
-import icon13 from '../../pages/WeatherInfoPage/images/icons/icon-13.svg';
-import icon14 from '../../pages/WeatherInfoPage/images/icons/icon-14.svg';
-
 class WeatherInfoPage extends React.Component {
 //function WeatherInfoPage(props) {
 //const weatherInfoPage = (props) => {  
 
   state = {
-    weatherDataLoaded: null,
-    weatherJSONData: null,
+    weatherDataLoaded: false,
     weatherData: {
         description: '',
         descriptionIcon: '',
@@ -48,46 +32,16 @@ class WeatherInfoPage extends React.Component {
         timeZone: '',
         locationId: '',
         locationName: '',
-        icon: null,
         nearFuture: []
-      },
-      error: null,
+      }, 
+      error: false
     };
 
     componentDidMount() {
         this.getData();    
     }
 
-    decideIcon(desc) {
-        let descIcon = '';
-
-        switch (desc) {
-            case ('açık'):
-                descIcon = icon2;
-                break;
-            case ('kapalı'):
-                descIcon = icon5;
-                break;
-            case ('parçalı bulutlu'):
-                descIcon = icon6;
-                break;
-                case ('hafif yağmur'):
-                descIcon = icon9;
-                break;
-            case ('orta şiddetli yağmur'):
-                descIcon = icon10;
-                break;
-            default:
-                descIcon= '';
-        }
-        
-        return descIcon;
-    }
-
     getData = () => {
-        let descIcon = '';
-        let descIconArray = [] ;
-
         //axios.get(`${process.env.REACT_APP_FB_INGREDIENTS_SUFFIX}`)
         //axios.get('/weatherme/v1/getcurrentweather/Istanbul')
         //axios.get('/weatherme/v1/getcurrentweather/745044')   // Istanbul
@@ -105,16 +59,6 @@ class WeatherInfoPage extends React.Component {
                     item['dtTxt'] = item['dtTxt'].substr(11,5);
                 });
 
-                descIcon = this.decideIcon(response.data['description']);
-                descIconArray[0] = this.decideIcon(response.data['nearFuture'][0]['description']);
-                descIconArray[1] = this.decideIcon(response.data['nearFuture'][1]['description']);
-                descIconArray[2] = this.decideIcon(response.data['nearFuture'][2]['description']);
-                descIconArray[3] = this.decideIcon(response.data['nearFuture'][3]['description']);
-                descIconArray[4] = this.decideIcon(response.data['nearFuture'][4]['description']);
-                descIconArray[5] = this.decideIcon(response.data['nearFuture'][5]['description']);
-                descIconArray[6] = this.decideIcon(response.data['nearFuture'][6]['description']);
-                descIconArray[7] = this.decideIcon(response.data['nearFuture'][7]['description']);
-        
                 let weatherNearFuture = [];
                 let i = 0;
                 response.data['nearFuture'].forEach(function( item ) {
@@ -124,7 +68,6 @@ class WeatherInfoPage extends React.Component {
                                 temp: item['temp'], 
                                 description: item['description'], 
                                 dtTxt: item['dtTxt'],
-                                icon: descIconArray[i]
                             }
                             );
                     }
@@ -133,7 +76,6 @@ class WeatherInfoPage extends React.Component {
 
                 this.setState({
                     weatherDataLoaded: true,
-                    weatherJSONData: response.data,
                     weatherData: {
                         description: response.data['description'],
                         descriptionIcon: response.data['descriptionIcon'],
@@ -149,7 +91,6 @@ class WeatherInfoPage extends React.Component {
                         timeZone: response.data['timeZone'],
                         locationId: response.data['locationId'],
                         locationName: response.data['locationName'],
-                        icon: descIcon,
                         nearFuture: weatherNearFuture
                     }
                 });
@@ -174,6 +115,9 @@ class WeatherInfoPage extends React.Component {
     var month = months[ d.getMonth() ];
     var date = d.getDate();
 
+    const weatherNearFuture = this.state.weatherDataLoaded ? <WeatherNearFuture weatherData={this.state.weatherData} daysArray={weekDays} dayNumOfWeek={dayNumOfWeek} /> : '';
+    const weatherCurrent = this.state.weatherDataLoaded ? <WeatherCurrent weatherData={this.state.weatherData} dayOfWeek={dayOfWeek} month={month} date={date}/> : '';
+
     return (
       
         <div className="site-content">
@@ -186,11 +130,11 @@ class WeatherInfoPage extends React.Component {
             <div className="container">
               <div className="forecast-container">
 
-                <WeatherCurrent weatherData={this.state.weatherData} dayOfWeek={dayOfWeek} month={month} date={date}/>
+                {weatherCurrent}
 
                 {/* <WeatherNextDays daysArray={weekDays} dayNumOfWeek={dayNumOfWeek} /> */}
-                <WeatherNearFuture weatherData={this.state.weatherData} daysArray={weekDays} dayNumOfWeek={dayNumOfWeek} />
-              
+                {weatherNearFuture} 
+
               </div>
             </div>
           </div>

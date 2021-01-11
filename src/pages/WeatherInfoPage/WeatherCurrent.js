@@ -1,8 +1,7 @@
 import React from 'react';
+import decideIcon from './DecideIcon';
 
 const weatherCurrent = (props) => {
-
-  let descIcon = props.weatherData.icon;
 
   return (
           
@@ -16,7 +15,7 @@ const weatherCurrent = (props) => {
             <div className="degree">
               <div className="num">{props.weatherData.realTemprature}<sup>o</sup>C</div>
               <div className="forecast-icon">
-                  <img src={descIcon} alt="" width="75" />
+                  <img src={decideIcon(props.weatherData.description)} alt="" width="75" />
               </div>	
             </div>
             <div>
