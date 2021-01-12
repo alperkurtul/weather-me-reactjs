@@ -23,13 +23,16 @@ const decideIcon = (desc) => {
                 case ('açık'):
                     descIcon = icon2;
                     break;
-                case ('kapalı'):
+                case ('parçalı az bulutlu'):
+                    descIcon = icon3;
+                    break;
+                    case ('kapalı'):
                     descIcon = icon5;
                     break;
                 case ('parçalı bulutlu'):
                     descIcon = icon6;
                     break;
-                    case ('hafif yağmur'):
+                case ('hafif yağmur'):
                     descIcon = icon9;
                     break;
                 case ('orta şiddetli yağmur'):
