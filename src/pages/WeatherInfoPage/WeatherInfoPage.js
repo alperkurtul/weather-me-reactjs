@@ -32,7 +32,8 @@ class WeatherInfoPage extends React.Component {
         timeZone: '',
         locationId: '',
         locationName: '',
-        nearFuture: []
+        nearFuture: [],
+        nextDays: []
       }, 
       error: false
     };
@@ -59,6 +60,13 @@ class WeatherInfoPage extends React.Component {
                     item['dtTxt'] = item['dtTxt'].substr(11,5);
                 });
 
+                response.data['nextDays'].forEach(function( item ) {
+                  item['temp'] = Math.round(item['temp']);
+                  item['tempMin'] = Math.round(item['tempMin']);
+                  item['tempMax'] = Math.round(item['tempMax']);
+                  item['dtTxt'] = item['dtTxt'].substr(11,5);
+                });
+
                 let weatherNearFuture = [];
                 let i = 0;
                 response.data['nearFuture'].forEach(function( item ) {
@@ -72,6 +80,19 @@ class WeatherInfoPage extends React.Component {
                             );
                     }
                     i++;
+                });
+
+                let weatherNextDays = [];
+                response.data['nextDays'].forEach(function( item ) {
+                  weatherNextDays.push(
+                            {
+                                temp: item['temp'],
+                                tempMin: item['tempMin'], 
+                                tempMax: item['tempMax'], 
+                                description: item['description'], 
+                                dtTxt: item['dtTxt'],
+                            }
+                            );
                 });
 
                 this.setState({
@@ -91,7 +112,8 @@ class WeatherInfoPage extends React.Component {
                         timeZone: response.data['timeZone'],
                         locationId: response.data['locationId'],
                         locationName: response.data['locationName'],
-                        nearFuture: weatherNearFuture
+                        nearFuture: weatherNearFuture,
+                        nextDays: weatherNextDays
                     }
                 });
             })
@@ -115,8 +137,9 @@ class WeatherInfoPage extends React.Component {
     var month = months[ d.getMonth() ];
     var date = d.getDate();
 
-    const weatherNearFuture = this.state.weatherDataLoaded ? <WeatherNearFuture weatherData={this.state.weatherData} daysArray={weekDays} dayNumOfWeek={dayNumOfWeek} /> : '';
     const weatherCurrent = this.state.weatherDataLoaded ? <WeatherCurrent weatherData={this.state.weatherData} dayOfWeek={dayOfWeek} month={month} date={date}/> : '';
+    const weatherNearFuture = this.state.weatherDataLoaded ? <WeatherNearFuture weatherData={this.state.weatherData} daysArray={weekDays} dayNumOfWeek={dayNumOfWeek} /> : '';
+    const weatherNextDays = this.state.weatherDataLoaded ? <WeatherNextDays weatherData={this.state.weatherData} daysArray={weekDays} dayNumOfWeek={dayNumOfWeek} /> : '';
 
     return (
       
@@ -132,8 +155,19 @@ class WeatherInfoPage extends React.Component {
 
                 {weatherCurrent}
 
-                {/* <WeatherNextDays daysArray={weekDays} dayNumOfWeek={dayNumOfWeek} /> */}
                 {weatherNearFuture} 
+
+              </div>
+            </div>
+          </div>
+
+          <div style={{height: "150px"}}></div>
+
+          <div className="forecast-table">
+            <div className="container">
+              <div className="forecast-container">
+
+              {weatherNextDays}
 
               </div>
             </div>
