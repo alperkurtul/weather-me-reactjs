@@ -20,35 +20,38 @@ const decideIcon = (desc) => {
         let descIcon = '';
 
         switch (desc) {
-                case ('açık'):
-                    descIcon = icon2;
-                    break;
-                case ('parçalı az bulutlu'):
-                    descIcon = icon3;
-                    break;
-                    case ('kapalı'):
-                    descIcon = icon5;
-                    break;
-                case ('parçalı bulutlu'):
-                    descIcon = icon6;
-                    break;
-                case ('hafif yağmur'):
-                    descIcon = icon9;
-                    break;
-                case ('orta şiddetli yağmur'):
-                    descIcon = icon10;
-                    break;
-                case ('şiddetli yağmur'):
-                    descIcon = icon11;
-                    break;
-                case ('hafif kar yağışlı'):
-                    descIcon = icon13;
-                    break;
-                case ('kar yağışlı'):
-                    descIcon = icon14;
-                    break;
-                default:
-                    descIcon= '';
+            case ('az bulutlu'):
+                descIcon = icon1;
+                break;
+            case ('açık'):
+                descIcon = icon2;
+                break;
+            case ('parçalı az bulutlu'):
+                descIcon = icon3;
+                break;
+            case ('kapalı'):
+                descIcon = icon5;
+                break;
+            case ('parçalı bulutlu'):
+                descIcon = icon6;
+                break;
+            case ('hafif yağmur'):
+                descIcon = icon9;
+                break;
+            case ('orta şiddetli yağmur'):
+                descIcon = icon10;
+                break;
+            case ('şiddetli yağmur'):
+                descIcon = icon11;
+                break;
+            case ('hafif kar yağışlı'):
+                descIcon = icon13;
+                break;
+            case ('kar yağışlı'):
+                descIcon = icon14;
+                break;
+            default:
+                descIcon= '';
         }
         
         return descIcon;
