@@ -44,7 +44,10 @@ const decideIcon = (desc) => {
                 case ('hafif kar yağışlı'):
                     descIcon = icon13;
                     break;
-                    default:
+                case ('kar yağışlı'):
+                    descIcon = icon14;
+                    break;
+                default:
                     descIcon= '';
         }
         
