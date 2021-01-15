@@ -15,11 +15,13 @@ import icon12 from '../../pages/WeatherInfoPage/images/icons/icon-12.svg';
 import icon13 from '../../pages/WeatherInfoPage/images/icons/icon-13.svg';
 import icon14 from '../../pages/WeatherInfoPage/images/icons/icon-14.svg';
 
-const decideIcon = (desc) => {  
+const decideIcon = (data) => {  
 
         let descIcon = '';
 
-        switch (desc) {
+        descIcon = data.icon;
+
+        /*switch (data.description) {
             case ('az bulutlu'):
                 descIcon = icon1;
                 break;
@@ -47,12 +49,15 @@ const decideIcon = (desc) => {
             case ('hafif kar yağışlı'):
                 descIcon = icon13;
                 break;
-            case ('kar yağışlı'):
+            case ('light rain and snow'):
+                descIcon = icon13;
+                break;
+                case ('kar yağışlı'):
                 descIcon = icon14;
                 break;
             default:
                 descIcon= '';
-        }
+        }*/
         
         return descIcon;
 

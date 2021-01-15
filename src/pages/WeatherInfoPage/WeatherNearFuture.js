@@ -14,7 +14,7 @@ const weatherNearFuture = (props) => {
                 </div> 
                 <div className="forecast-content">
                     <div className="forecast-icon">
-                    <img src={decideIcon(nf.description)} alt="" width="35" />
+                    <img src={decideIcon(nf)} alt="" width="35" />
                     </div>
                     <div className="degree">{nf.temp}<sup>o</sup>C</div>
                     {/* <small>{nf.description}</small> */}

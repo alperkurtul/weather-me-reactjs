@@ -16,7 +16,7 @@ const weatherInfoOld  = (props) => {
                         <div className={'WILabel02'}>{props.weatherData.locationName}</div>
                         <div class={"WIWeatherSituation"}>{props.weatherData.description}</div>
                         </div>
-                        <div><span className={'WILabel01'}>Sıcaklık&nbsp;:</span>&nbsp;{props.weatherData.realTemprature}&#176;C</div>
+                        <div><span className={'WILabel01'}>Sıcaklık&nbsp;:</span>&nbsp;{props.weatherData.realTemperature}&#176;C</div>
                         <div><span className={'WILabel01'}>Nem Oranı&nbsp;:</span>&nbsp;%{props.weatherData.humidity}</div>
                     </div>
 
@@ -24,15 +24,15 @@ const weatherInfoOld  = (props) => {
                         <div className={'WI400'}>
                             <div className={'WI500 WI500margin01'}>
                                 <div className={'WILabel01'}>Hissedilen</div>
-                                <div>{props.weatherData.feelsTemprature}</div>
+                                <div>{props.weatherData.feelsTemperature}</div>
                             </div>
                             <div className={'WI500 WI500margin01'}>
                                 <div className={'WILabel01'}>En düşük</div>
-                                <div>{props.weatherData.minTemprature}</div>
+                                <div>{props.weatherData.minTemperature}</div>
                             </div>
                             <div className={'WI500 WI500margin02'}>
                                 <div className={'WILabel01'}>En yüksek</div>
-                                <div>{props.weatherData.maxTemprature}</div>
+                                <div>{props.weatherData.maxTemperature}</div>
                             </div>
                         </div>
 

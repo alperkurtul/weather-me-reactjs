@@ -21,7 +21,7 @@ const weatherOtherContent = () => {
     <main className="main-content">
         <div className="fullwidth-block">
           <div className="container">
-            <img src={icon1} alt="" width="48" />
+            {/* <img src={icon1} alt="" width="48" />
             <img src={icon2} alt="" width="48" />
             <img src={icon3} alt="" width="48" />
             <img src={icon4} alt="" width="48" />
@@ -34,7 +34,7 @@ const weatherOtherContent = () => {
             <img src={icon11} alt="" width="48" />
             <img src={icon12} alt="" width="48" />
             <img src={icon13} alt="" width="48" />
-            <img src={icon14} alt="" width="48" />
+            <img src={icon14} alt="" width="48" /> */}
           </div>
         </div>
     </main>

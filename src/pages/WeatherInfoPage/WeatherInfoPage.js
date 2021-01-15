@@ -16,14 +16,17 @@ class WeatherInfoPage extends React.Component {
 //const weatherInfoPage = (props) => {  
 
   state = {
+    error: false,
     weatherDataLoaded: false,
     weatherData: {
+        id: '',
+        main: '',
         description: '',
-        descriptionIcon: '',
-        realTemprature: '',
-        feelsTemprature: '',
-        minTemprature: '',
-        maxTemprature: '',
+        icon: '',
+        realTemperature: '',
+        feelsTemperature: '',
+        minTemperature: '',
+        maxTemperature: '',
         pressure: '',
         humidity: '',
         countryCode: '',
@@ -34,8 +37,7 @@ class WeatherInfoPage extends React.Component {
         locationName: '',
         nearFuture: [],
         nextDays: []
-      }, 
-      error: false
+      }
     };
 
     componentDidMount() {
@@ -50,8 +52,8 @@ class WeatherInfoPage extends React.Component {
         axios.get('/weatherme/v1/getcurrentweather/744926')   // Kadıköy
             .then(response => {
 
-                response.data['realTemprature'] = Math.round(response.data['realTemprature']);
-                response.data['feelsTemprature'] = Math.round(response.data['feelsTemprature']);
+                response.data['realTemperature'] = Math.round(response.data['realTemperature']);
+                response.data['feelsTemperature'] = Math.round(response.data['feelsTemperature']);
                 response.data['sunRise'] = response.data['sunRise'].substr(11,5);
                 response.data['sunSet'] = response.data['sunSet'].substr(11,5);
 
@@ -73,8 +75,11 @@ class WeatherInfoPage extends React.Component {
                     if (i > 0 & i < 7) {
                         weatherNearFuture.push(
                             {
+                                id: item['id'],
+                                main: item['main'],
+                                description: item['description'],
+                                icon: item['icon'],
                                 temp: item['temp'], 
-                                description: item['description'], 
                                 dtTxt: item['dtTxt'],
                             }
                             );
@@ -86,24 +91,30 @@ class WeatherInfoPage extends React.Component {
                 response.data['nextDays'].forEach(function( item ) {
                   weatherNextDays.push(
                             {
+                                id: item['id'],
+                                main: item['main'],
+                                description: item['description'],
+                                icon: item['icon'],
                                 temp: item['temp'],
                                 tempMin: item['tempMin'], 
-                                tempMax: item['tempMax'], 
-                                description: item['description'], 
+                                tempMax: item['tempMax'],  
                                 dtTxt: item['dtTxt'],
                             }
                             );
                 });
 
                 this.setState({
+                    error: false,
                     weatherDataLoaded: true,
                     weatherData: {
+                        id: response.data['id'],
+                        main: response.data['main'],
                         description: response.data['description'],
-                        descriptionIcon: response.data['descriptionIcon'],
-                        realTemprature: response.data['realTemprature'],
-                        feelsTemprature: response.data['feelsTemprature'],
-                        minTemprature: response.data['minTemprature'],
-                        maxTemprature: response.data['maxTemprature'],
+                        icon: response.data['icon'],
+                        realTemperature: response.data['realTemperature'],
+                        feelsTemperature: response.data['feelsTemperature'],
+                        minTemperature: response.data['minTemperature'],
+                        maxTemperature: response.data['maxTemperature'],
                         pressure: response.data['pressure'],
                         humidity: response.data['humidity'],
                         countryCode: response.data['countryCode'],
@@ -118,10 +129,35 @@ class WeatherInfoPage extends React.Component {
                 });
             })
             .catch(error => {
+                
+                var errMsg = error.message;
+                if (error.response) {
+                  /*
+                   * The request was made and the server responded with a
+                   * status code that falls out of the range of 2xx
+                   */
+                  console.log('RESPONSE.DATA : ', error.response.data);
+                  console.log('RESPONSE.STATUS : ', error.response.status);
+                  console.log('RESPONSE.HEADERS : ', error.response.headers);
+
+                  errMsg = errMsg + '\n' + 'RESPONSE.STATUS : ' + error.response.status;
+                } else if (error.request) {
+                    /*
+                    * The request was made but no response was received, `error.request`
+                    * is an instance of XMLHttpRequest in the browser and an instance
+                    * of http.ClientRequest in Node.js
+                    */
+                    console.log('REQUEST : ', error.request);
+
+                    errMsg = errMsg + '\n' + 'REQUEST : ' + error.request;
+                } else {
+                    // Something happened in setting up the request and triggered an Error
+                    console.log('Error.message : ', error.message);
+                    errMsg = error.message;
+                }
+                alert(errMsg);
+
                 this.setState({error: true});
-                console.error(error.response);
-                alert(error.response.data.message);
-                alert(error.response.data.details);
             });
     };
 
