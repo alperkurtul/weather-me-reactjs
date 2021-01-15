@@ -19,14 +19,12 @@ const weatherCurrent = (props) => {
               </div>	
             </div>
             <div>
-              <span>En düşük {props.weatherData.minTemperature}</span>
-              <span>En yüksek {props.weatherData.maxTemperature}</span>
-              <span>Hissedilen {props.weatherData.feelsTemperature}</span>
+              <span>Hissedilen: {props.weatherData.feelsTemperature} <sup>o</sup>C</span>
+              <span>Basınç: {props.weatherData.pressure} hPa</span>
             </div>
             <div style={{marginTop: "10px"}}>
-              <span>Basınç {props.weatherData.pressure}</span>
-              <span>Gün doğumu {props.weatherData.sunRise}</span>
-              <span>Gün batımı {props.weatherData.sunSet}</span>
+              <span>Gün Doğumu: {props.weatherData.sunRise}</span>
+              <span>Gün Batımı: {props.weatherData.sunSet}</span>
             </div>
             
         </div>
