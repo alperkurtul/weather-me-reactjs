@@ -21,7 +21,7 @@ const decideIcon = (data) => {
 
         descIcon = data.icon;
 
-        /*switch (data.description) {
+        /* switch (data.description) {
             case ('az bulutlu'):
                 descIcon = icon1;
                 break;
@@ -57,7 +57,7 @@ const decideIcon = (data) => {
                 break;
             default:
                 descIcon= '';
-        }*/
+        } */
         
         return descIcon;
 

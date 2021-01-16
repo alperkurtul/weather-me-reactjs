@@ -16,7 +16,8 @@ const weatherNextDays = (props) => {
                 </div> 
                 <div className="forecast-content">
                     <div className="forecast-icon">
-                    <img src={decideIcon(nd)} alt="" width="35" />
+                    {/*<img style={{margin: "5px", borderRadius: "20%", border: "solid 0px", backgroundColor: "#007173"}} src={decideIcon(nd)} alt="" width="60" />*/}
+                    <img className="forecast-img-nd" src={decideIcon(nd)} alt="" />
                     </div>
                     <div className="degree">{nd.temp}<sup>o</sup>C</div>
                     {/* <small>{nd.description}</small> */}

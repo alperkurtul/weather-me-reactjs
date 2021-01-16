@@ -15,7 +15,7 @@ const weatherCurrent = (props) => {
             <div className="degree">
               <div className="num">{props.weatherData.realTemperature}<sup>o</sup>C</div>
               <div className="forecast-icon">
-                  <img src={decideIcon(props.weatherData)} alt="" width="75" />
+                  <img className="forecast-img-c" src={decideIcon(props.weatherData)} alt="" />
               </div>	
             </div>
             <div>
