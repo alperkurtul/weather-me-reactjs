@@ -241,7 +241,7 @@ address {
 p {
   margin-top: 0; }
 
-form input, form textarea, form select {
+.find-location input, form input, form textarea, form select {
   outline: none;
   border: none;
   padding: 10px;
@@ -256,9 +256,9 @@ form textarea {
 /*
  * Reusable Components Style
  */
-.button, form input[type="submit"], form button, form input[type="reset"] {
+.button, .find-location input[type="submit"], form input[type="submit"], form button, form input[type="reset"] {
   border: none;
-  background: #009ad8;
+  background: #78909c;
   padding: 10px 20px;
   border-radius: 30px;
   color: white; }
@@ -1293,7 +1293,7 @@ form textarea {
       .forecast-container .forecast .forecast-icon .forecast-img-c {
         border-radius: 50%; 
         background: #78909c;
-        width: 170px; }
+        width: 140px; }
       .forecast-container .forecast .forecast-icon .forecast-img-nf {
         padding: 3px; 
         border-radius: 50%; 

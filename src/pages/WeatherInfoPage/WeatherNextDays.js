@@ -5,10 +5,8 @@ import decideIcon from './DecideIcon';
 const weatherNextDays = (props) => {
 
     const nextDaysObjs = props.weatherData.nextDays;
-    let i = 0;
 
     let nextDays = nextDaysObjs.map(nd => {         
-        i++;
         return(
             <div className={["forecast", "forecast2"].join(" ")}>
                 <div className="forecast-header">

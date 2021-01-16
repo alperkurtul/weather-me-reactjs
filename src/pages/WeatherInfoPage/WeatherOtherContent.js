@@ -1,6 +1,6 @@
 import React from 'react';
 
-import icon1 from './images/icons/icon-1.svg';
+/*import icon1 from './images/icons/icon-1.svg';
 import icon2 from './images/icons/icon-2.svg';
 import icon3 from './images/icons/icon-3.svg';
 import icon4 from './images/icons/icon-4.svg';
@@ -13,7 +13,7 @@ import icon10 from './images/icons/icon-10.svg';
 import icon11 from './images/icons/icon-11.svg';
 import icon12 from './images/icons/icon-12.svg';
 import icon13 from './images/icons/icon-13.svg';
-import icon14 from './images/icons/icon-14.svg';
+import icon14 from './images/icons/icon-14.svg';*/
 
 const weatherOtherContent = () => {
   return (

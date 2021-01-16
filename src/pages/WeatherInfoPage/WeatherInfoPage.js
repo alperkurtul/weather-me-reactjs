@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import axios from "../../axios-weather";
 
@@ -35,16 +35,18 @@ class WeatherInfoPage extends React.Component {
         timeZone: '',
         locationId: '',
         locationName: '',
+        longitude: '',
+        latitude: '',    
         nearFuture: [],
         nextDays: []
       }
     };
 
     componentDidMount() {
-        this.getData();    
+        //this.getWeatherData(744926);    
     }
 
-    getData = () => {
+    getWeatherData = (locationId) => {
         let loopCount = 0;
         let pushedCount = 0;
 
@@ -57,7 +59,7 @@ class WeatherInfoPage extends React.Component {
         //axios.get('/weatherme/v1/getcurrentweather/Istanbul')
         //axios.get('/weatherme/v1/getcurrentweather/745044')   // Istanbul
         //axios.get('/weatherme/v1/getcurrentweather/745042')   // İstanbul
-        axios.get('/weatherme/v1/getcurrentweather/744926')   // Kadıköy
+        axios.get('/weatherme/v1/getcurrentweather/' + locationId)   // Kadıköy
             .then(response => {
 
                 response.data['realTemperature'] = Math.round(response.data['realTemperature']);
@@ -185,6 +187,8 @@ class WeatherInfoPage extends React.Component {
 
   render() {
 
+    console.log('WeatherInfoPage render()');
+
     //var weekDays = ['Paz','Pzt','Sal','Çar','Per','Cum','Cmt'];
     var weekDays = ['Pazar','Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi'];
     var months = ['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
@@ -205,7 +209,7 @@ class WeatherInfoPage extends React.Component {
 
           <WeatherHeader />
 
-          <WeatherFindLocation />
+          <WeatherFindLocation getWeatherData={this.getWeatherData} />
             
           <div className="forecast-table">
             <div className="container">
