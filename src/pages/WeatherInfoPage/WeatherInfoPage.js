@@ -45,6 +45,14 @@ class WeatherInfoPage extends React.Component {
     }
 
     getData = () => {
+        let loopCount = 0;
+        let pushedCount = 0;
+
+        var weekDays = ['Pazar','Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi'];
+    
+        var d = new Date();
+        var dayNumOfWeek = d.getDay();
+    
         //axios.get(`${process.env.REACT_APP_FB_INGREDIENTS_SUFFIX}`)
         //axios.get('/weatherme/v1/getcurrentweather/Istanbul')
         //axios.get('/weatherme/v1/getcurrentweather/745044')   // Istanbul
@@ -66,13 +74,14 @@ class WeatherInfoPage extends React.Component {
                   item['temp'] = Math.round(item['temp']);
                   item['tempMin'] = Math.round(item['tempMin']);
                   item['tempMax'] = Math.round(item['tempMax']);
-                  item['dtTxt'] = item['dtTxt'].substr(11,5);
+                  item['dtTxt'] = item['dtTxt'].substr(0,10);
                 });
 
+                loopCount = 0;
+                pushedCount = 0;
                 let weatherNearFuture = [];
-                let i = 0;
                 response.data['nearFuture'].forEach(function( item ) {
-                    if (i > 0 & i < 7) {
+                    if (loopCount >= 1 & pushedCount < 6) {
                         weatherNearFuture.push(
                             {
                                 id: item['id'],
@@ -82,25 +91,38 @@ class WeatherInfoPage extends React.Component {
                                 temp: item['temp'], 
                                 dtTxt: item['dtTxt'],
                             }
-                            );
+                        );
+                        pushedCount++;
                     }
-                    i++;
+                    loopCount++;
                 });
 
+                let pushStartIndex = 0;
+                if (response.data['nextDays'].length > 5) {
+                  pushStartIndex = 1;
+                } 
+                
+                loopCount = 0;
+                pushedCount = 0;
                 let weatherNextDays = [];
                 response.data['nextDays'].forEach(function( item ) {
-                  weatherNextDays.push(
-                            {
-                                id: item['id'],
-                                main: item['main'],
-                                description: item['description'],
-                                icon: item['icon'],
-                                temp: item['temp'],
-                                tempMin: item['tempMin'], 
-                                tempMax: item['tempMax'],  
-                                dtTxt: item['dtTxt'],
-                            }
-                            );
+                  if (loopCount >= pushStartIndex & pushedCount < 5) {
+                    weatherNextDays.push(
+                        {
+                            id: item['id'],
+                            main: item['main'],
+                            description: item['description'],
+                            icon: item['icon'],
+                            temp: item['temp'],
+                            tempMin: item['tempMin'], 
+                            tempMax: item['tempMax'],  
+                            dtTxt: item['dtTxt'],
+                            weekDay: weekDays[ (dayNumOfWeek + loopCount) % 7 ] ,
+                        }
+                    );
+                    pushedCount++;
+                  }
+                  loopCount++;
                 });
 
                 this.setState({
@@ -174,8 +196,8 @@ class WeatherInfoPage extends React.Component {
     var date = d.getDate();
 
     const weatherCurrent = this.state.weatherDataLoaded ? <WeatherCurrent weatherData={this.state.weatherData} dayOfWeek={dayOfWeek} month={month} date={date}/> : '';
-    const weatherNearFuture = this.state.weatherDataLoaded ? <WeatherNearFuture weatherData={this.state.weatherData} daysArray={weekDays} dayNumOfWeek={dayNumOfWeek} /> : '';
-    const weatherNextDays = this.state.weatherDataLoaded ? <WeatherNextDays weatherData={this.state.weatherData} daysArray={weekDays} dayNumOfWeek={dayNumOfWeek} /> : '';
+    const weatherNearFuture = this.state.weatherDataLoaded ? <WeatherNearFuture weatherData={this.state.weatherData} /> : '';
+    const weatherNextDays = this.state.weatherDataLoaded ? <WeatherNextDays weatherData={this.state.weatherData} /> : '';
 
     return (
       

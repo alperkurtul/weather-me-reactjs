@@ -1321,7 +1321,7 @@ form textarea {
 @media screen and (max-width: 990px) {
   .forecast-container .forecast2 {
     display: block;
-    width: 25.0%;
+    width: 20.0%;
     float: left; } }
 
 @media screen and (max-width: 990px) {
@@ -1332,7 +1332,7 @@ form textarea {
     
 @media screen and (max-width: 990px) {
   .forecast-container .forecast .forecast-icon .forecast-img-nf {
-    margin-left: -15px;
+    margin-left: -16px;
     padding: 3px; 
     border-radius: 50%; 
     background: #78909c; 
@@ -1340,6 +1340,7 @@ form textarea {
 
 @media screen and (max-width: 990px) {
   .forecast-container .forecast .forecast-icon .forecast-img-nd {
+    margin-left: -10px;
     padding: 3px; 
     border-radius: 50%; 
     background: #78909c; 

@@ -11,11 +11,11 @@ const weatherCurrent = (props) => {
             <div className="day">{props.date} {props.month}&nbsp;{props.dayOfWeek}</div>
         </div>
         <div className="forecast-content">
-            <div className="location">{props.weatherData.locationName}{/*&nbsp;&nbsp;({props.weatherData.description})*/}</div>
+            <div className="location">{props.weatherData.locationName}</div>
             <div className="degree">
               <div className="num">{props.weatherData.realTemperature}<sup>o</sup>C</div>
               <div className="forecast-icon">
-                  <img className="forecast-img-c" src={decideIcon(props.weatherData)} alt="" />
+                  <img className="forecast-img-c" src={decideIcon(props.weatherData)} alt={props.weatherData.description} title={props.weatherData.description} />
               </div>	
             </div>
             <div>
