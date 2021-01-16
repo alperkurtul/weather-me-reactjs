@@ -6,10 +6,7 @@ import banner from './images/banner.png';
 class WeatherFindLocation extends React.Component {
 
   state = {
-    //locationId: '',
     locationName: '',
-    //longitude: '',
-    //latitude: '',
   }
 
   componentDidMount() {
@@ -29,9 +26,6 @@ class WeatherFindLocation extends React.Component {
   getLocation = () => {
 
     let locationId = '';
-    //let locationName = '';
-    //let longitude = '';
-    //let latitude = '';
     let locName = this.state.locationName;
 
     axios.get('/weatherme/v1/getlocationlist', {
@@ -45,18 +39,8 @@ class WeatherFindLocation extends React.Component {
       response.data.forEach(function( item ) {
         if (item['locationName'] == locName) {
           locationId = item['locationId'];
-          //locationName = item['locationName'];
-          //longitude = item['longitude'];
-          //latitude = item['latitude'];
         }
       });
-
-      /*this.setState({
-        locationId: locationId,
-        locationName: locationName,
-        longitude: longitude,
-        latitude: latitude
-      });*/
 
       console.log('locationId : ' + locationId);
       this.props.getWeatherData(locationId);
@@ -84,7 +68,6 @@ class WeatherFindLocation extends React.Component {
     }); 
 
   }
-
 
   render() {
 
