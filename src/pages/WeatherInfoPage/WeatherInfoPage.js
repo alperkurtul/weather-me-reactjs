@@ -187,8 +187,6 @@ class WeatherInfoPage extends React.Component {
 
   render() {
 
-    console.log('WeatherInfoPage render()');
-
     //var weekDays = ['Paz','Pzt','Sal','Çar','Per','Cum','Cmt'];
     var weekDays = ['Pazar','Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi'];
     var months = ['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];

@@ -1,53 +1,81 @@
 import React from 'react';
 import axios from "../../axios-weather";
+import FindLocationScrollList from './FindLocationScrollList';
 
-import banner from './images/banner.png';
+import banner from './images/banner-02.png';
 
 class WeatherFindLocation extends React.Component {
 
   state = {
+    searchedKeyword: '',
     locationName: '',
+    locationList: null,
+    locationListItemCount: 0
   }
 
-  componentDidMount() {
-    console.log('WeatherFindLocation componentDidMount');
-  }
+  locationChoiceHasBeenMade = (locationId) => {
 
-  retrieveLocationName = (event) => {
-
-    console.log('value: ' + event.target.value);
+    let locationName = ''
+    this.state.locationList.forEach(function( item ) {
+      if (item['locationId'] == locationId) {
+        locationName = item['locationName']
+        return;
+      }
+    });
 
     this.setState({
-        locationName: event.target.value
-      }
+        searchedKeyword: '',
+        locationName: locationName,
+        locationList: null,
+        locationListItemCount: 0
+      }    
     )
+
+    this.props.getWeatherData(locationId)
+
   }
 
-  getLocation = () => {
+  typingLocation = (event) => {
 
-    let locationId = '';
-    let locName = this.state.locationName;
+    this.setState({
+        searchedKeyword: event.target.value,
+        locationName: event.target.value,
+        locationList: null,
+        locationListItemCount: 0
+      }
+    )
+
+    if (event.target.value.length > 0) this.searchForLocation(event.target.value);
+
+  }
+
+  searchForLocation = (locationName) => {
 
     axios.get('/weatherme/v1/getlocationlist', {
       params: {
-        locationname: locName
+        locationname: locationName
       }
     })   
     .then(response => {
-      console.log('response : ' + response.data)
 
-      response.data.forEach(function( item ) {
-        if (item['locationName'] == locName) {
-          locationId = item['locationId'];
+      if (response.data['searchedKeyword'] == this.state.searchedKeyword) {
+        
+        if (response.data['locationRespList'].length < 550) {
+          this.setState({
+            locationList: response.data['locationRespList'],
+            locationListItemCount: response.data['locationRespList'].length
+          });
+        } else {
+          this.setState({
+            locationList: null,
+            locationListItemCount: 0
+          });
         }
-      });
-
-      console.log('locationId : ' + locationId);
-      this.props.getWeatherData(locationId);
+      }
 
     })
     .catch(error => {
-        
+
         var errMsg = error.message;
         if (error.response) {
           console.log('RESPONSE.DATA : ', error.response.data);
@@ -71,15 +99,19 @@ class WeatherFindLocation extends React.Component {
 
   render() {
 
-    console.log('WeatherFindLocation render()');
+    const findLocationScrollList = this.state.locationList == null ? '' : <FindLocationScrollList locationChoiceHasBeenMade={this.locationChoiceHasBeenMade} locationList={this.state.locationList} /> ;
+
     return (
       
       <div className="hero" style={{backgroundImage: `url(${banner})`}}>
         <div className="container">
           <div className="find-location">
-            <input name="locationName" type="text" placeholder="Şehir arayın..." onChange={this.retrieveLocationName} />
-            <input type="submit" value="Ara" onClick={this.getLocation} />
+            <input value={this.state.locationName} autoComplete="off" name="locationName" type="text" placeholder="Şehir arayın..." onChange={this.typingLocation} />
+            {/*<input type="submit" value="Ara" />*/}
           </div>
+          
+          {findLocationScrollList}
+
         </div>
       </div>
 

@@ -1212,7 +1212,7 @@ form textarea {
 
 .find-location {
   position: relative;
-  margin-bottom: 70px; }
+  /*margin-bottom: 70px;*/ }
   .find-location input[type="text"] {
     width: 100%;
     padding: 20px 50px 20px 20px;
@@ -1291,17 +1291,17 @@ form textarea {
     .forecast-container .forecast .forecast-icon {
       /*height: 50px;*/ }
       .forecast-container .forecast .forecast-icon .forecast-img-c {
-        border-radius: 50%; 
+        border-radius: 10%; 
         background: #78909c;
         width: 140px; }
       .forecast-container .forecast .forecast-icon .forecast-img-nf {
         padding: 3px; 
-        border-radius: 50%; 
+        border-radius: 10%; 
         background: #78909c; 
         width: 70px; }
       .forecast-container .forecast .forecast-icon .forecast-img-nd {
         padding: 3px; 
-        border-radius: 50%; 
+        border-radius: 10%; 
         background: #78909c; 
         width: 70px; }
         .forecast-container .forecast .forecast-content {
@@ -1326,7 +1326,7 @@ form textarea {
 
 @media screen and (max-width: 990px) {
   .forecast-container .forecast .forecast-icon .forecast-img-c {
-    border-radius: 50%; 
+    border-radius: 10%; 
     background: #78909c;
     width: 100px; } }
     
@@ -1334,7 +1334,7 @@ form textarea {
   .forecast-container .forecast .forecast-icon .forecast-img-nf {
     margin-left: -16px;
     padding: 3px; 
-    border-radius: 50%; 
+    border-radius: 10%; 
     background: #78909c; 
     width: 50px; } }
 
@@ -1342,7 +1342,7 @@ form textarea {
   .forecast-container .forecast .forecast-icon .forecast-img-nd {
     margin-left: -10px;
     padding: 3px; 
-    border-radius: 50%; 
+    border-radius: 10%; 
     background: #78909c; 
     width: 50px; } }    
 
@@ -1716,3 +1716,8 @@ form textarea {
     .site-footer .social-links a:hover {
       background: #009ad8;
       color: white; }
+
+    li:hover {
+      background: #78909c;
+      font-weight: bold; }
+  

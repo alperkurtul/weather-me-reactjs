@@ -29,6 +29,7 @@ const weatherNextDays = (props) => {
         {nextDays}
     </> 
   );
+  
 }
 
 export default weatherNextDays;
