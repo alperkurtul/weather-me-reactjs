@@ -18,7 +18,7 @@ class WeatherFindLocation extends React.Component {
     let locationName = ''
     this.state.locationList.forEach(function( item ) {
       if (item['locationId'] == locationId) {
-        locationName = item['locationName']
+        locationName = item['locationName'] + ', ' + item['country']
         return;
       }
     });
@@ -45,7 +45,7 @@ class WeatherFindLocation extends React.Component {
       }
     )
 
-    if (event.target.value.length > 0) this.searchForLocation(event.target.value);
+    if (event.target.value.length > 1) this.searchForLocation(event.target.value);
 
   }
 
@@ -60,7 +60,7 @@ class WeatherFindLocation extends React.Component {
 
       if (response.data['searchedKeyword'] == this.state.searchedKeyword) {
         
-        if (response.data['locationRespList'].length < 550) {
+        if (response.data['locationRespList'].length > 0 & this.state.searchedKeyword.length > 1 /*& response.data['locationRespList'].length < 550*/) {
           this.setState({
             locationList: response.data['locationRespList'],
             locationListItemCount: response.data['locationRespList'].length
