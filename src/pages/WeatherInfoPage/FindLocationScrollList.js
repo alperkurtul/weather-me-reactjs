@@ -12,7 +12,7 @@ class FindLocationScrollList extends React.Component {
 
         const locList = this.props.locationList;
 
-        let listHeight = 45
+        let listHeight = 30
         if (locList.length < 10) {
             listHeight = (20 * locList.length) + listHeight
         } else {
@@ -21,29 +21,30 @@ class FindLocationScrollList extends React.Component {
         listHeight = listHeight + 'px'
 
         const divStyle = {
-                        backgroundColor: "#7A7278", 
-                        borderRadius: "10px",
-                        margin: "1px 0px 0px 0px", 
-                        padding: "10px 10px 10px 10px",
-                        opacity: "0.95",
-                        width: "86%", 
-                        overflowY: "scroll",
-                        cursor: "pointer",
-                        height: listHeight
+            backgroundColor: "#7A7278", 
+            borderRadius: "10px",
+            margin: "1px 0px 0px 0px", 
+            padding: "10px 10px 10px 10px",
+            opacity: "0.95",
+            width: "86%", 
+            overflowY: "scroll",
+            cursor: "pointer",
+            height: listHeight
         };
-        
+
         const ulStyle = {
-                        listStyle: "none", 
-                        lineHeight: "190%",
-                        textAlign: "left", 
-                        fontSize: "16px",
-                        color: "#FFFFFF", 
-                        fontFamily: "inherit"
+                    listStyle: "none", 
+                    lineHeight: "190%",
+                    textAlign: "left", 
+                    fontSize: "16px",
+                    color: "#FFFFFF", 
+                    fontFamily: "inherit"
         };
 
         const liStyle = {
-                        padding: "0px 5px 0px 5px",
+                    padding: "0px 5px 0px 5px",
         };
+
 
         let locationList = locList.map(loc => {         
             return(
@@ -61,7 +62,7 @@ class FindLocationScrollList extends React.Component {
 
                 </ul>
             </div>
-    );
+        );
 
     }
 

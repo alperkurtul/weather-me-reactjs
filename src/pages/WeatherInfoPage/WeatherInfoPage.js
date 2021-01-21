@@ -197,9 +197,9 @@ class WeatherInfoPage extends React.Component {
     var month = months[ d.getMonth() ];
     var date = d.getDate();
 
-    const weatherCurrent = this.state.weatherDataLoaded ? <WeatherCurrent weatherData={this.state.weatherData} dayOfWeek={dayOfWeek} month={month} date={date}/> : '';
-    const weatherNearFuture = this.state.weatherDataLoaded ? <WeatherNearFuture weatherData={this.state.weatherData} /> : '';
-    const weatherNextDays = this.state.weatherDataLoaded ? <WeatherNextDays weatherData={this.state.weatherData} /> : '';
+    const weatherCurrent = this.state.weatherDataLoaded ? <WeatherCurrent weatherData={this.state.weatherData} dayOfWeek={dayOfWeek} month={month} date={date}/> : null;
+    const weatherNearFuture = this.state.weatherDataLoaded ? <WeatherNearFuture weatherData={this.state.weatherData} /> : null;
+    const weatherNextDays = this.state.weatherDataLoaded ? <WeatherNextDays weatherData={this.state.weatherData} /> : null;
 
     return (
       

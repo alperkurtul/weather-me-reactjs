@@ -8,24 +8,47 @@ class WeatherFindLocation extends React.Component {
 
   state = {
     searchedKeyword: '',
-    locationName: '',
+    selectedLocationName: '',
+    displayedLocationName: '',
     locationList: null,
     locationListItemCount: 0
   }
 
+  componentDidMount() {
+    let locationId = sessionStorage.getItem('locationId')
+    let selectedLocationName = sessionStorage.getItem('selectedLocationName')
+    let displayedLocationName = sessionStorage.getItem('displayedLocationName')
+
+    this.setState({
+      selectedLocationName: selectedLocationName,
+      displayedLocationName: displayedLocationName,
+      }    
+    )
+
+    if (locationId != null & locationId != '') this.props.getWeatherData(locationId)
+
+  }
+
   locationChoiceHasBeenMade = (locationId) => {
 
-    let locationName = ''
+    let selectedLocationName = ''
+    let displayedLocationName = ''
     this.state.locationList.forEach(function( item ) {
       if (item['locationId'] == locationId) {
-        locationName = item['locationName'] + ', ' + item['country']
+        selectedLocationName = item['locationName']
+        displayedLocationName = item['locationName'] + ', ' + item['country']
         return;
       }
     });
 
+    sessionStorage.setItem('locationId', locationId)
+    sessionStorage.setItem('selectedLocationName', selectedLocationName)
+    sessionStorage.setItem('displayedLocationName', displayedLocationName)
+
     this.setState({
         searchedKeyword: '',
-        locationName: locationName,
+        selectedLocationName: selectedLocationName,
+        displayedLocationName: displayedLocationName,
         locationList: null,
         locationListItemCount: 0
       }    
@@ -39,7 +62,7 @@ class WeatherFindLocation extends React.Component {
 
     this.setState({
         searchedKeyword: event.target.value,
-        locationName: event.target.value,
+        displayedLocationName: event.target.value,
         locationList: null,
         locationListItemCount: 0
       }
@@ -99,18 +122,18 @@ class WeatherFindLocation extends React.Component {
 
   render() {
 
-    const findLocationScrollList = this.state.locationList == null ? '' : <FindLocationScrollList locationChoiceHasBeenMade={this.locationChoiceHasBeenMade} locationList={this.state.locationList} /> ;
+    const findLocationScrollList = this.state.locationList == null ? null : <FindLocationScrollList locationChoiceHasBeenMade={this.locationChoiceHasBeenMade} locationList={this.state.locationList} /> ;
 
     return (
       
       <div className="hero" style={{backgroundImage: `url(${banner})`}}>
         <div className="container">
           <div className="find-location">
-            <input value={this.state.locationName} autoComplete="off" name="locationName" type="text" placeholder="Şehir arayın..." onChange={this.typingLocation} />
+            <input value={this.state.displayedLocationName} autoComplete="off" name="locationName" type="text" placeholder="Şehir arayın..." onChange={this.typingLocation} />
             {/*<input type="submit" value="Ara" />*/}
           </div>
-          
-          {findLocationScrollList}
+
+                {findLocationScrollList}
 
         </div>
       </div>
