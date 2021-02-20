@@ -83,7 +83,7 @@ class WeatherInfoPage extends React.Component {
                 pushedCount = 0;
                 let weatherNearFuture = [];
                 response.data['nearFuture'].forEach(function( item ) {
-                    if (loopCount >= 1 & pushedCount < 6) {
+                    if (loopCount >= 0 & pushedCount < 6) {
                         weatherNearFuture.push(
                             {
                                 id: item['id'],
