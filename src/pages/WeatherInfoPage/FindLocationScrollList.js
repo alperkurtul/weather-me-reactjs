@@ -46,7 +46,7 @@ class FindLocationScrollList extends React.Component {
         };
 
 
-        let locationList = locList.map(loc => {         
+        let locationList = locList.slice(0,100).map(loc => {   
             return(
                 
                 <li style={liStyle} onClick={this.listItemClicked} value={loc['locationId']}>{loc['locationName']}, {loc['country']}</li>
