@@ -36,7 +36,8 @@ class WeatherInfoPage extends React.Component {
         locationId: '',
         locationName: '',
         longitude: '',
-        latitude: '',    
+        latitude: '',  
+        weatherDataTime: '',  
         nearFuture: [],
         nextDays: []
       }
@@ -52,15 +53,17 @@ class WeatherInfoPage extends React.Component {
 
         var weekDays = ['Pazar','Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi'];
     
-        var d = new Date();
-        var dayNumOfWeek = d.getDay();
-    
         //axios.get(`${process.env.REACT_APP_FB_INGREDIENTS_SUFFIX}`)
         //axios.get('/weatherme/v1/getcurrentweather/Istanbul')
         //axios.get('/weatherme/v1/getcurrentweather/745044')   // Istanbul
         //axios.get('/weatherme/v1/getcurrentweather/745042')   // İstanbul
         axios.get('/weatherme/v1/getcurrentweather/' + locationId)   // Kadıköy
             .then(response => {
+
+                var weatherDataTime = response.data['weatherDataTime'];
+                var d = new Date();
+                d.setFullYear(parseInt(weatherDataTime.substring(6,10)), parseInt(weatherDataTime.substring(3,5)) -1, parseInt(weatherDataTime.substring(0,2)));
+                var dayNumOfWeek = d.getDay();
 
                 response.data['realTemperature'] = Math.round(response.data['realTemperature']);
                 response.data['feelsTemperature'] = Math.round(response.data['feelsTemperature']);
@@ -147,6 +150,7 @@ class WeatherInfoPage extends React.Component {
                         timeZone: response.data['timeZone'],
                         locationId: response.data['locationId'],
                         locationName: response.data['locationName'],
+                        weatherDataTime: response.data['weatherDataTime'],
                         nearFuture: weatherNearFuture,
                         nextDays: weatherNextDays
                     }
@@ -192,6 +196,8 @@ class WeatherInfoPage extends React.Component {
     var months = ['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
 
     var d = new Date();
+    d.setFullYear(parseInt(this.state.weatherData.weatherDataTime.substring(6,10)), parseInt(this.state.weatherData.weatherDataTime.substring(3,5)) -1, parseInt(this.state.weatherData.weatherDataTime.substring(0,2)));
+
     var dayNumOfWeek = d.getDay();
     var dayOfWeek = weekDays[ dayNumOfWeek ];
     var month = months[ d.getMonth() ];
