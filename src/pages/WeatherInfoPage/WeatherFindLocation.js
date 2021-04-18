@@ -25,7 +25,7 @@ class WeatherFindLocation extends React.Component {
       }    
     )
 
-    if (locationId != null & locationId != '') this.props.getWeatherData(locationId)
+    if (locationId !== null & locationId !== '') this.props.getWeatherData(locationId)
 
   }
 
@@ -34,7 +34,7 @@ class WeatherFindLocation extends React.Component {
     let selectedLocationName = ''
     let displayedLocationName = ''
     this.state.locationList.forEach(function( item ) {
-      if (item['locationId'] == locationId) {
+      if (item['locationId'] === locationId) {
         selectedLocationName = item['locationName']
         displayedLocationName = item['locationName'] + ', ' + item['country']
         return;
